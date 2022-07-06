@@ -1,0 +1,15 @@
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\bin\Debug\net6.0\Application.deps.json
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\bin\Debug\net6.0\Application.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\bin\Debug\net6.0\Application.pdb
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\bin\Debug\net6.0\Domain.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\bin\Debug\net6.0\Domain.pdb
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\refint\Application.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\Application.pdb
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Application\obj\Debug\net6.0\ref\Application.dll
