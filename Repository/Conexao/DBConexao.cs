@@ -17,7 +17,7 @@ namespace Infraestructure.Conexao
             try
             {
                 //Pega a string de conexao com o banco de dados
-                var con = configuration.GetConnectionString("");
+                var con = configuration.GetConnectionString("SqlServerConnection");
                 //Instancia de conexao com banco de dados
                 Conexao = new SqlConnection(con);
                 //Abre a conexao com o banco de dados

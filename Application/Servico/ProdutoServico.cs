@@ -1,40 +1,41 @@
 ﻿using Application.Interface;
 using Domain;
+using Domain.Interface;
 
 namespace Application
 {
     public class ProdutoServico : IProdutoServico
     {
-        IProdutoServico IProdutoServico;
+        private IProdutoRepositorio _produtoRepositorio;
 
-        public ProdutoServico(IProdutoServico iProdutoServico)
+        public ProdutoServico(IProdutoRepositorio produtoRepositorio)
         {
-            IProdutoServico = iProdutoServico;
+            _produtoRepositorio = produtoRepositorio;
         }
 
         public int Delete(Produto obj)
         {
-            return IProdutoServico.Delete(obj);
+            return _produtoRepositorio.Delete(obj);
         }
 
         public IEnumerable<Produto> GetAll()
         {
-            return IProdutoServico.GetAll();
+            return _produtoRepositorio.GetAll();
         }
 
         public Produto GetId(int id)
         {
-            return IProdutoServico.GetId(id);
+            return _produtoRepositorio.GetId(id);
         }
 
         public int Insert(Produto obj)
         {
-            return IProdutoServico.Insert(obj);
+            return _produtoRepositorio.Insert(obj);
         }
 
         public int Update(Produto obj)
         {
-            return IProdutoServico.Update(obj);
+            return _produtoRepositorio.Update(obj);
         }
     }
 }

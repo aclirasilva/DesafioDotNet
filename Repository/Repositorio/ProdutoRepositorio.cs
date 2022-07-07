@@ -30,9 +30,11 @@ namespace Repository
                 {
                     Produto produto = new Produto();
                     produto.Id = dataReader.GetInt32("Id");
-                    produto.Descricao = dataReader.GetString("Description");
+                    produto.Descricao = dataReader.GetString("Descricao");
+                    produto.Marca = dataReader.GetString("Marca");
                     produto.Preco = dataReader.GetDecimal("Preco");
-                    produto.Quatidade = dataReader.GetDecimal("Quantidade");
+                    produto.DtCadastro = dataReader.GetDateTime("DtCadastro");
+                    produto.DtAlteracao = dataReader.GetDateTime("DtAlteracao");
 
                     lstProduto.Add(produto);
                 }
@@ -56,9 +58,11 @@ namespace Repository
                 while (dataReader.Read())
                 {
                     produto.Id = dataReader.GetInt32("Id");
-                    produto.Descricao = dataReader.GetString("Description");
+                    produto.Descricao = dataReader.GetString("Descricao");
+                    produto.Marca = dataReader.GetString("Marca");
                     produto.Preco = dataReader.GetDecimal("Preco");
-                    produto.Quatidade = dataReader.GetDecimal("Quantidade");
+                    produto.DtCadastro = dataReader.GetDateTime("DtCadastro");
+                    produto.DtAlteracao = dataReader.GetDateTime("DtAlteracao");
                 }
 
                 return produto;
@@ -71,12 +75,14 @@ namespace Repository
                 var cmd = new SqlCommand();
                 cmd.Connection = con as SqlConnection;
 
-                cmd.CommandText = @"INSERT INTO PRODUTO (ID, DESCRICAO, PRECO, QUANTIDADE) VALUES (@ID, @DESCRICAO, @PRECO, @QUANTIDADE)";
+                cmd.CommandText = @"INSERT INTO PRODUTOS (DESCRICAO, MARCA, PRECO, DTCADASTRO, DTALTERACAO) VALUES (@DESCRICAO, @MARCA, @PRECO, @DTCADASTRO, @DTALTERACAO)";
 
-                cmd.Parameters.AddWithValue("@Id", obj.Id);
+                //cmd.Parameters.AddWithValue("@Id", obj.Id);
                 cmd.Parameters.AddWithValue("@Descricao", obj.Descricao);
+                cmd.Parameters.AddWithValue("@Marca", obj.Marca);
                 cmd.Parameters.AddWithValue("@Preco", obj.Preco);
-                cmd.Parameters.AddWithValue("@Quatidade", obj.Quatidade);
+                cmd.Parameters.AddWithValue("@DtCadastro", obj.DtCadastro);
+                cmd.Parameters.AddWithValue("@DtAlteracao", obj.DtAlteracao);
 
                 return cmd.ExecuteNonQuery();
             }
@@ -88,12 +94,14 @@ namespace Repository
                 var cmd = new SqlCommand();
                 cmd.Connection = con as SqlConnection;
 
-                cmd.CommandText = @"UPDATE PRODUTO SET (ID = @ID, DESCRICAO = @DESCRICAO, PRECO = @PRECO, QUANTIDADE = @QUANTIDADE)";
+                cmd.CommandText = @"UPDATE PRODUTOS SET DESCRICAO = @DESCRICAO, MARCA = @MARCA, PRECO = @PRECO, DTCADASTRO = @DTCADASTRO, DTALTERACAO = @DTALTERACAO WHERE ID = @ID";
 
                 cmd.Parameters.AddWithValue("@Id", obj.Id);
                 cmd.Parameters.AddWithValue("@Descricao", obj.Descricao);
+                cmd.Parameters.AddWithValue("@Marca", obj.Marca);
                 cmd.Parameters.AddWithValue("@Preco", obj.Preco);
-                cmd.Parameters.AddWithValue("@Quatidade", obj.Quatidade);
+                cmd.Parameters.AddWithValue("@DtCadastro", obj.DtCadastro);
+                cmd.Parameters.AddWithValue("@DtAlteracao", obj.DtAlteracao);
 
                 return cmd.ExecuteNonQuery();
             }
@@ -105,7 +113,7 @@ namespace Repository
                 var cmd = new SqlCommand();
                 cmd.Connection = con as SqlConnection;
 
-                cmd.CommandText = @"DELETE FROM PRODUTO WHERE ID = @ID";
+                cmd.CommandText = @"DELETE FROM PRODUTOS WHERE ID = @ID";
                 cmd.Parameters.AddWithValue("@Id", obj.Id);
 
                 return cmd.ExecuteNonQuery();

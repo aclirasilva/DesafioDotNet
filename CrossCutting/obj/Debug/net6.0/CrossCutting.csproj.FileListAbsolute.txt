@@ -10,3 +10,10 @@ D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\Cross
 D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\obj\Debug\net6.0\refint\CrossCutting.dll
 D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\obj\Debug\net6.0\CrossCutting.pdb
 D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\obj\Debug\net6.0\ref\CrossCutting.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\bin\Debug\net6.0\Domain.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\bin\Debug\net6.0\Infraestructure.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\bin\Debug\net6.0\Domain.pdb
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\bin\Debug\net6.0\Infraestructure.pdb
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\obj\Debug\net6.0\CrossCutting.csproj.CopyComplete
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\bin\Debug\net6.0\Application.dll
+D:\Engenharia .Net\Projetos Exemplos\ExemploArquitetura\ExemploArquitetura\CrossCutting\bin\Debug\net6.0\Application.pdb
