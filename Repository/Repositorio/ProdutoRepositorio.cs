@@ -21,8 +21,9 @@ namespace Repository
             {
                 var cmd = new SqlCommand();
                 cmd.Connection = con as SqlConnection;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM PRODUTOS";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SP_ConsultaProduto";
+                cmd.Parameters.AddWithValue("@Id", "");
 
                 SqlDataReader dataReader = cmd.ExecuteReader();
 
@@ -48,8 +49,8 @@ namespace Repository
             {
                 var cmd = new SqlCommand();
                 cmd.Connection = con as SqlConnection;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM PRODUTOS WHERE Id = @Id";
+                cmd.CommandType = CommandType.StoredProcedure ;
+                cmd.CommandText = "SP_ConsultaProduto";
                 cmd.Parameters.AddWithValue("@Id", id);
 
                 SqlDataReader dataReader = cmd.ExecuteReader();
@@ -75,7 +76,8 @@ namespace Repository
                 var cmd = new SqlCommand();
                 cmd.Connection = con as SqlConnection;
 
-                cmd.CommandText = @"INSERT INTO PRODUTOS (DESCRICAO, MARCA, PRECO, DTCADASTRO, DTALTERACAO) VALUES (@DESCRICAO, @MARCA, @PRECO, @DTCADASTRO, @DTALTERACAO)";
+                cmd.CommandText = @"INSERT INTO PRODUTOS (DESCRICAO, MARCA, PRECO, DTCADASTRO, DTALTERACAO) 
+                                    VALUES (@DESCRICAO, @MARCA, @PRECO, @DTCADASTRO, @DTALTERACAO)";
 
                 //cmd.Parameters.AddWithValue("@Id", obj.Id);
                 cmd.Parameters.AddWithValue("@Descricao", obj.Descricao);
@@ -94,7 +96,9 @@ namespace Repository
                 var cmd = new SqlCommand();
                 cmd.Connection = con as SqlConnection;
 
-                cmd.CommandText = @"UPDATE PRODUTOS SET DESCRICAO = @DESCRICAO, MARCA = @MARCA, PRECO = @PRECO, DTCADASTRO = @DTCADASTRO, DTALTERACAO = @DTALTERACAO WHERE ID = @ID";
+                cmd.CommandText = @"UPDATE PRODUTOS SET DESCRICAO = @DESCRICAO, MARCA = @MARCA, 
+                                    PRECO = @PRECO, DTCADASTRO = @DTCADASTRO, DTALTERACAO = @DTALTERACAO 
+                                    WHERE ID = @ID";
 
                 cmd.Parameters.AddWithValue("@Id", obj.Id);
                 cmd.Parameters.AddWithValue("@Descricao", obj.Descricao);
